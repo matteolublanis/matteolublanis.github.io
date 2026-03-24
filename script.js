@@ -1,5 +1,4 @@
-// Replace this URL with your actual external backend API later
-const PROJECT_API = 'https://jsonplaceholder.typicode.com/posts?_limit=3'; 
+const PROJECT_API = 'https://api.github.com/users/matteolublanis/repos'; 
 
 async function fetchProjects() {
     const container = document.getElementById('project-grid');
