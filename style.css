@@ -59,3 +59,51 @@ header {
 .card:hover { transform: translateY(-5px); }
 
 footer { text-align: center; padding: 40px; opacity: 0.6; }
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.bio-card {
+    background: var(--card);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #334155;
+    margin-bottom: 40px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.skill-category {
+    background: rgba(56, 189, 248, 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px dashed var(--accent);
+}
+
+.skill-category h3 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.skill-category ul {
+    list-style: "→ ";
+    padding-left: 20px;
+}
+
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
