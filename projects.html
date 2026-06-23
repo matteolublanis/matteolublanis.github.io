@@ -7,29 +7,73 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <div class="logo"><a href="index.html" style="text-decoration: none; color: white;">DevPortfolio</a></div>
+    <a href="#projects" class="skip-link">Skip to content</a>
+    <nav aria-label="Primary">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html" class="highlight">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>
+        <a href="projects.html" class="nav-btn active" aria-current="page">Projects</a>
     </nav>
 
     <main class="about-container">
         <section id="projects">
-        <h2>My Work</h2>
-        <div id="project-grid" class="grid">
-            <p class="loading">Fetching projects from external API...</p>
-        </div>
-    </section>
+            <h2>What I'm <span class="highlight">Working On</span></h2>
+            <p style="text-align:center; color: var(--muted); margin-top:-20px; margin-bottom:40px;">
+                A few of the things I'm currently building and learning.
+            </p>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Tabu Search for Flying Sidekick Traveling Salesman Problem (FSTSP)</h3>
+                    <p>A Tabu Search algorithm built to solve the FSTSP: a course project for Optimization Algorithms.
+                        The goal was to implement a metaheuristic capable of finding good solutions for the problem in a reasonable amount of time, 
+                        and we delivered a working metaheuristic that not only found good solutions, but also outperformed Gurobi.
+                        This was developed by: Matteo Lublanis and Sahiljit Singh.
+                    </p>
+                    <div>
+                        <span class="tag">Optimization</span>
+                        <span class="tag">Metaheuristics</span>
+                        <span class="tag">Java</span>
+                    </div>
+                    <a class="card-link" href="index.html#contact" target="_blank">Contact me for more info →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Monopoly</h3>
+                    <p>A simple implementation of the classic Monopoly game using Java. It is also multiplayer!</p>
+                    <div>
+                        <span class="tag">Java</span>
+                    </div>
+                    <a class="card-link" href="https://github.com/matteolublanis/Polypsony" target="_blank">View Repo →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Expenses manager</h3>
+                    <p>To do.</p>
+                    <div>
+                        <span class="tag">Java</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Weather Forecasting using an LSTM</h3>
+                    <p>To do.</p>
+                    <div>
+                        <span class="tag">Python</span>
+                        <span class="tag">sci-kit-learn, TensorFlow</span>
+                        <span class="tag">Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2026 | Matteo Lublanis</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="anims.js"></script>
 </body>
 </html>
