@@ -1,5 +1,5 @@
 :root {
-    --bg: #0e1a12;        /* deep forest green */
+    --bg: #0e1a12;
     --card: #17271c;     
     --text: #eaf3ea;      
     --muted: #9fb3a2;    
@@ -8,15 +8,19 @@
     --border: #235138;
     --coral: #e9604c;
     --coral-dark: #cf4d3a;
-    --coral-soft: #e8a99d;  /* salmon — secondary text */
+    --coral-soft: #e8a99d;  
 }
 
+.about-hero h2,
 #projects h2,
 #contact h2 {
     text-align: center;
     margin-bottom: 40px;
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
 }
+
+.bio-card h2 { font-size: clamp(1.4rem, 4vw, 1.8rem); }
+.hero-inner p, .about-hero p { font-size: clamp(0.95rem, 2.6vw, 1.1rem); }
 
 html {
     scroll-behavior: smooth;
@@ -30,6 +34,7 @@ body {
     color: var(--text);
     margin: 0;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .panel {
@@ -162,7 +167,7 @@ header {
 }
 
 header h1 {
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 6vw, 2.8rem);
     margin-bottom: 0.5rem;
     animation: fadeUp 0.8s ease both;
 }
@@ -304,7 +309,7 @@ footer {
 
 .section-label {
     width: 100%;
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 3.5vw, 1.5rem);
     margin: 44px 0 18px;
     padding-left: 12px;
     border-left: 4px solid var(--coral);
@@ -382,11 +387,38 @@ footer {
 .contact-list a:hover { color: var(--text); }
 .contact-list span.value { font-weight: 600; }
 
+@media (max-width: 768px) {
+    nav { padding: 1.1rem 6%; }
+    nav ul { gap: 20px; }
+    .panel { padding: 32px 18px 48px; }
+    .bio-card { padding: 28px 22px; }
+    .about-container { padding: 40px 18px; }
+}
+
 @media (max-width: 600px) {
-    .skills-grid {
-        grid-template-columns: 1fr;
+    html { scroll-padding-top: 130px; }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 0.9rem 5%;
     }
-    nav { padding: 1.5rem 5%; }
+    nav ul { gap: 18px; flex-wrap: wrap; justify-content: center; }
+    nav a.nav-btn { justify-self: auto; }
+
+    #home.panel { padding-top: 120px; }
+    .panel { padding: 28px 16px 40px; }
+    .bio-card { padding: 22px 18px; }
+    .entry { padding: 16px 18px; }
+
+    .skills-grid { grid-template-columns: 1fr; }
+    .grid { grid-template-columns: 1fr; padding: 10px; }
+}
+
+@media (max-width: 380px) {
+    nav ul { gap: 12px; }
+    nav a { font-size: 0.95rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
