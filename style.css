@@ -429,7 +429,7 @@ footer {
     margin-bottom: 14px;
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
-.entry:hover { transform: translateX(5px); border-left-color: var(--coral-dark); }
+
 .entry h4 { margin: 0 0 4px; font-size: 1.1rem; }
 .entry .meta { display: block; color: var(--coral-soft); font-size: 0.85rem; font-weight: 600; }
 .entry p { margin: 10px 0 0; color: var(--muted); }
@@ -474,8 +474,6 @@ footer {
     margin-bottom: 16px;
     transition: transform 0.3s ease;
 }
-
-.contact-list li:hover { transform: translateX(5px); }
 
 .contact-list .label {
     display: block;
